@@ -1,0 +1,18 @@
+// variables, mixins, functions
+
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+// the URL is relative to compiled CSS file which
+// will be located in dist/css/main.css
+$bg-image: url("../img/showcase.jpg");
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
